@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginRight="10dp"
-        android:src="@drawable/abc_ab_share_pack_mtrl_alpha" />
+        android:src="@drawable/ic_av_radio" />
 
     <TextView
         android:id="@+id/notification_tv_title"
@@ -34,6 +34,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/abc_ic_menu_paste_mtrl_am_alpha" />
+        android:src="@drawable/ic_av_pause_circle_outline" />
 
 </RelativeLayout>

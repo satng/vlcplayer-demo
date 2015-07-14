@@ -49,8 +49,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 VLCMediaPlayServiceControler.getService(getApplicationContext()).append(new MediaWrapper(Uri.parse("http://m.livestream.com")));
                 VLCMediaPlayServiceControler.getService(getApplicationContext()).setRepeatType(PlaybackService.RepeatType.All);
 
-                //load() clear
-                VLCMediaPlayServiceControler.getService(getApplicationContext()).load(new MediaWrapper(Uri.parse("mms://alive.rbc.cn/am927")));
+                //load() to clear
+//                VLCMediaPlayServiceControler.getService(getApplicationContext()).load(new MediaWrapper(Uri.parse("mms://alive.rbc.cn/am927")));
 
                 VLCMediaPlayServiceControler.getService(getApplicationContext()).addCallback(new PlaybackService.Callback() {
                     @Override

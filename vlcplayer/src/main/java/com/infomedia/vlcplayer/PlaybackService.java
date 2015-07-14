@@ -795,7 +795,7 @@ public class PlaybackService extends Service implements IVLCVout.Callback {
 
         // add notification to status bar
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
-                .setSmallIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha)
+                .setSmallIcon(R.drawable.ic_av_radio)
                 .setTicker(title + " - " + artist)
                 .setAutoCancel(!mMediaPlayer.isPlaying())
                 .setOngoing(mMediaPlayer.isPlaying())
@@ -822,11 +822,11 @@ public class PlaybackService extends Service implements IVLCVout.Callback {
         remoteViews.setTextViewText(R.id.notification_tv_desc, artist);
 
         if (isPlaying()) {
-            remoteViews.setImageViewResource(R.id.notification_btn_action, R.drawable.abc_btn_check_to_on_mtrl_000);
-            remoteViews.setOnClickPendingIntent(R.id.notification_btn_action, createAction(ACTION_REMOTE_PLAY));
-        } else {
-            remoteViews.setImageViewResource(R.id.notification_btn_action, R.drawable.abc_ab_share_pack_mtrl_alpha);
+            remoteViews.setImageViewResource(R.id.notification_btn_action, R.drawable.ic_av_pause_circle_outline);
             remoteViews.setOnClickPendingIntent(R.id.notification_btn_action, createAction(ACTION_REMOTE_PAUSE));
+        } else {
+            remoteViews.setImageViewResource(R.id.notification_btn_action, R.drawable.ic_av_play_circle_outline);
+            remoteViews.setOnClickPendingIntent(R.id.notification_btn_action, createAction(ACTION_REMOTE_PLAY));
         }
 
         builder.setContent(remoteViews);

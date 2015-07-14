@@ -810,6 +810,7 @@ public class PlaybackService extends Service implements IVLCVout.Callback {
             pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         }
 
+        //TODO
         Intent iBackward = new Intent(ACTION_REMOTE_BACKWARD);
         Intent iPlay = new Intent(ACTION_REMOTE_PLAYPAUSE);
         Intent iForward = new Intent(ACTION_REMOTE_FORWARD);

@@ -79,6 +79,12 @@ public class MediaPlayer extends VLCObject<MediaPlayer.Event> {
         public int getEsChangedType() {
             return (int) arg1;
         }
+
+        @Override
+        public String toString() {
+            return String.format("Event#{type:%d, timechanged:%d, positionchanged:%f, VoutCount:%d, EsChangedType:%d",
+                    type, getTimeChanged(), getPositionChanged(), getVoutCount(), getEsChangedType());
+        }
     }
 
     public interface EventListener extends VLCEvent.Listener<MediaPlayer.Event> {}
